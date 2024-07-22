@@ -1,33 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Menurestro from "./MenuRestro"
+import Header from "./Header"
+import Mood from "./Mood"
+import Button from "./Button"
+import ButtonLike from "./ButtonLike"
+import ButtonLikes from "./ButtonLikes"
+import Memo from "./Memo"
+import UseCallback from "./UseCallback"
+import UseRef from "./UseRef"
+import UseContext from "./UseContext"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function App(){
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header text="Looping"/>
+      <Menurestro/>
+      <Header text="Props"/>
+      <Mood day="Senin" mood="😂"/>
+      <Mood day="Selasa" mood="😭"/>
+      <Mood day="Rabu" mood="🥰"/>
+      <Header text="useState"/>
+      <Button />
+      <Header text="useEffect"/>
+      <ButtonLike />
+      <Header text="useMemo"/>
+      <ButtonLikes />
+      <Header text="Memo"/>
+      <Memo/>
+      <Header text="useCallback"/>
+      <UseCallback/>
+      <Header text="useRef"/>
+      <UseRef/>
+      <Header text="useContext"/>
+      <UseContext/>
     </>
   )
 }
